@@ -1,0 +1,44 @@
+﻿services:
+
+  postgres:
+    image: postgres:16
+
+    container_name: mabde-postgres
+
+    environment:
+      POSTGRES_DB: decision_engine
+      POSTGRES_USER: mabde
+      POSTGRES_PASSWORD: mabde_password
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    restart: unless-stopped
+
+
+  backend:
+    build:
+      context: ./backend
+
+    container_name: mabde-backend
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      DATABASE_URL: postgresql+psycopg2://mabde:mabde_password@postgres:5432/decision_engine
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      GEMINI_MODEL: ${GEMINI_MODEL}
+
+    depends_on:
+      - postgres
+
+    restart: unless-stopped
+
+
+volumes:
+
+  postgres_data:

@@ -1,0 +1,330 @@
+.new-decision-page {
+  padding: 32px 36px 48px;
+  min-height: 100%;
+  color: #e8edf5;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.decision-header {
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #8090a8;
+}
+
+.decision-header h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.decision-header p {
+  margin: 10px 0 0;
+  max-width: 720px;
+  color: #8c99ad;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+.decision-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 22px;
+  align-items: start;
+}
+
+
+/* ============================================================
+   FORM CARD
+   ============================================================ */
+
+.decision-form-card {
+  padding: 28px;
+  border: 1px solid #202a39;
+  border-radius: 16px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(21, 29, 41, 0.98),
+      rgba(15, 21, 31, 0.98)
+    );
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+.form-section {
+  margin-bottom: 22px;
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-weight: 650;
+  color: #c8d1df;
+}
+
+.field-help {
+  display: block;
+  margin-top: 7px;
+  color: #68778d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+.form-section textarea,
+.form-section select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #293446;
+  border-radius: 10px;
+  outline: none;
+  background: #101722;
+  color: #e8edf5;
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.form-section textarea {
+  min-height: 110px;
+  padding: 13px 14px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.form-section select {
+  height: 44px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.form-section textarea::placeholder {
+  color: #56657a;
+}
+
+.form-section textarea:focus,
+.form-section select:focus {
+  border-color: #4e6b96;
+  background: #111a27;
+  box-shadow:
+    0 0 0 3px rgba(78, 107, 150, 0.12);
+}
+
+
+/* ============================================================
+   FORM GRID
+   ============================================================ */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.form-error {
+  margin-top: 4px;
+  margin-bottom: 18px;
+  padding: 11px 13px;
+  border: 1px solid #56343b;
+  border-radius: 9px;
+  background: rgba(86, 52, 59, 0.18);
+  color: #e79ba7;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   SUBMIT
+   ============================================================ */
+
+.decision-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  height: 46px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 10px;
+  background: #e8edf5;
+  color: #0d141e;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.decision-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 24px rgba(232, 237, 245, 0.08);
+}
+
+.decision-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.decision-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+
+/* ============================================================
+   SIDE PANEL
+   ============================================================ */
+
+.decision-side-panel {
+  position: sticky;
+  top: 24px;
+  padding: 22px;
+  border: 1px solid #202a39;
+  border-radius: 16px;
+  background: #111823;
+}
+
+.side-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: #dbe3ee;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.workflow-item {
+  display: flex;
+  gap: 12px;
+  padding: 15px 0;
+  border-top: 1px solid #202a39;
+}
+
+.workflow-item:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.workflow-icon {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2a3546;
+  border-radius: 9px;
+  background: #151e2b;
+  color: #9cafc8;
+}
+
+.workflow-item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #d7dfeb;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.workflow-item span {
+  display: block;
+  color: #78869a;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  .decision-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .decision-side-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .new-decision-page {
+    padding: 22px 18px 34px;
+  }
+
+  .decision-header h1 {
+    font-size: 27px;
+  }
+
+  .decision-form-card {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .decision-side-panel {
+    padding: 18px;
+  }
+}
